@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Playlist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="welcome-open">
+    <div class="page-backdrop" aria-hidden="true"></div>
+    <!-- MAIN CONTAINER -->
+    <main class="container" id="playlistApp">
+      <!-- LEFT SIDE -->
+      <div class="left-side">
+        <h1>Playlist</h1>
+        <p>Songs that remind me of you</p>
+      </div>
+      <!-- RIGHT SIDE -->
+      <div class="right-side">
+        <!-- Hidden radios -->
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
+        <input type="radio" name="slider" id="item-4" />
+        <input type="radio" name="slider" id="item-5" />
+
+        <!-- CARDS -->
+        <div class="cards">
+          <!-- Song 1: Luna - Zoé -->
+          <label class="card" for="item-1" id="song-1">
+            <img src="https://i.scdn.co/image/ab67616d0000b2739abba2e4a7600af6c16988a9" alt="Luna" />
+          </label>
+          <!-- Song 2: Chachachá - Josean Log -->
+          <label class="card" for="item-2" id="song-2">
+            <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/8/8/f/8/806601572957716.jpg" alt="Chachachá" />
+          </label>
+          <!-- Song 3: Soledad y el Mar - Natalia Lafourcade -->
+          <label class="card" for="item-3" id="song-3">
+            <img src="https://i.ytimg.com/vi/31q9ogWJnxc/maxresdefault.jpg" alt="Soledad y el Mar" />
+          </label>
+          <!-- Song 4: Blue - Yung Kai -->
+          <label class="card" for="item-4" id="song-4">
+            <img src="https://i.scdn.co/image/ab67616d0000b273373c63a4666fb7193febc167" alt="Blue" />
+          </label>
+          <!-- Song 5: Compartir - Carla Morrison -->
+          <label class="card" for="item-5" id="song-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ75l5N8ONjNQO95NuGZhGSCQkt4zeBxA8ESA&s" alt="Compartir" />
+          </label>
+        </div>
+
+        <!-- PLAYER -->
+        <div class="player">
+          <!-- SONG INFO 1: Luna -->
+          <div class="song-info active" id="song-info-1">
+            <div class="title">Luna</div>
+            <div class="song-details">
+              <span class="artist">Zoé</span>
+              <span class="duration">--:--</span>
+            </div>
+            <input class="progress-bar" type="range" min="0" max="100" step="0.1" value="0" aria-label="Mover posición de reproducción" />
+            <div class="time-indicator">
+              <span class="elapsed">0:00</span>
+              <span class="remaining">--:--</span>
+            </div>
+          </div>
+          <!-- SONG INFO 2: Chachachá -->
+          <div class="song-info" id="song-info-2">
+            <div class="title">Chachachá</div>
+            <div class="song-details">
+              <span class="artist">Josean Log</span>
+              <span class="duration">--:--</span>
+            </div>
+            <input class="progress-bar" type="range" min="0" max="100" step="0.1" value="0" aria-label="Mover posición de reproducción" />
+            <div class="time-indicator">
+              <span class="elapsed">0:00</span>
+              <span class="remaining">--:--</span>
+            </div>
+          </div>
+          <!-- SONG INFO 3: Soledad y el Mar -->
+          <div class="song-info" id="song-info-3">
+            <div class="title">Soledad y el Mar</div>
+            <div class="song-details">
+              <span class="artist">Natalia Lafourcade</span>
+              <span class="duration">--:--</span>
+            </div>
+            <input class="progress-bar" type="range" min="0" max="100" step="0.1" value="0" aria-label="Mover posición de reproducción" />
+            <div class="time-indicator">
+              <span class="elapsed">0:00</span>
+              <span class="remaining">--:--</span>
+            </div>
+          </div>
+          <!-- SONG INFO 4: Blue -->
+          <div class="song-info" id="song-info-4">
+            <div class="title">Blue</div>
+            <div class="song-details">
+              <span class="artist">Yung Kai</span>
+              <span class="duration">--:--</span>
+            </div>
+            <input class="progress-bar" type="range" min="0" max="100" step="0.1" value="0" aria-label="Mover posición de reproducción" />
+            <div class="time-indicator">
+              <span class="elapsed">0:00</span>
+              <span class="remaining">--:--</span>
+            </div>
+          </div>
+          <!-- SONG INFO 5: Compartir -->
+          <div class="song-info" id="song-info-5">
+            <div class="title">Compartir</div>
+            <div class="song-details">
+              <span class="artist">Carla Morrison</span>
+              <span class="duration">--:--</span>
+            </div>
+            <input class="progress-bar" type="range" min="0" max="100" step="0.1" value="0" aria-label="Mover posición de reproducción" />
+            <div class="time-indicator">
+              <span class="elapsed">0:00</span>
+              <span class="remaining">--:--</span>
+            </div>
+          </div>
+
+          <!-- PLAYER CONTROLS -->
+          <div class="controls">
+            <button id="prev" type="button" aria-label="Canción anterior" title="Canción anterior">◁</button>
+            <button id="pause" type="button" aria-label="Reproducir" title="Reproducir">►</button>
+            <button id="next" type="button" aria-label="Siguiente canción" title="Siguiente canción">▷</button>
+          </div>
+          <!-- EXTRA CONTROLS: Favorite Button Only -->
+          <div class="extra-controls">
+            <button id="favorite" class="favorite-btn" type="button" aria-label="Agregar a favoritos" aria-pressed="false" title="Agregar a favoritos">♡</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Welcome: the original message, with a new visual presentation -->
+    <div class="modal-overlay" id="notificationModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" aria-describedby="welcomeDescription">
+      <div class="modal-content" id="modalContent">
+        <div class="welcome-record" aria-hidden="true"><div class="record-label">♫</div></div>
+        <span class="welcome-eyebrow">A little something for you</span>
+        <h2 id="welcomeTitle">Someone sent you a playlist</h2>
+        <p id="welcomeDescription">Hey, it's for you. I hope you listen to it.</p>
+        <button class="modal-close" id="openPlaylist" type="button">Open Playlist <span aria-hidden="true">↗</span></button>
+        <span class="welcome-footer">5 songs · made with care</span>
+      </div>
+    </div>
+
+    <!-- Audio Elements for each song -->
+    <audio id="audio-1" src="luna.mp3" preload="metadata"></audio>
+    <audio id="audio-2" src="chachacha.mp3" preload="metadata"></audio>
+    <audio id="audio-3" src="soledad.mp3" preload="metadata"></audio>
+    <audio id="audio-4" src="yung.mp3" preload="metadata"></audio>
+    <audio id="audio-5" src="compartir.mp3" preload="metadata"></audio>
+
+    <!-- Link to external JS -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
